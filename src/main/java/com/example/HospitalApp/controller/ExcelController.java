@@ -1,6 +1,7 @@
 package com.example.HospitalApp.controller;
 
 import com.example.HospitalApp.service.ExcelService2;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,13 +17,10 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class ExcelController {
 
     private final ExcelService2 excelService;
-
-    public ExcelController(ExcelService2 excelService) {
-        this.excelService = excelService;
-    }
 
     @GetMapping("/")
     public String index() {
